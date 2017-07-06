@@ -1,0 +1,16 @@
+{
+	"name": "rominfo",
+	"version": "1.0.0",
+	"description": "A command line tool and module for analyzing ROMs.",
+	"main": "index.js",
+	"repository": "https://github.com/moriczgergo/rominfo/",
+	"author": "skiilaa",
+	"license": "GPL-3.0",
+	"dependencies": {
+		"md5": "^2.2.1",
+		"yargs": "^8.0.2"
+	},
+	"bin": {
+		"rominfo": "index.js"
+	}
+}
