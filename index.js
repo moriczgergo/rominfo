@@ -15,7 +15,7 @@ var argv = require('yargs')
 var recognize = require('./bin/recognize.js'); //Recognize ROM
 var fs = require('fs');
 
-var file = fs.readFileSync(argv.file);
+var file = fs.readFileSync(argv.f);
 var res = recognize(file);
 
 if (res == "GBC") {
@@ -31,7 +31,7 @@ if (res == "GBC") {
 	console.log("Version: " + gbc.version(file));
 	console.log("Header checksum: " + gbc.headerChecksum(file));
 	console.log("Checksum: " + gbc.checksum(file));
-} else if (res == "GB"){
+} else if (res == "GB") {
 	var gb = require('./bin/gameboy.js');
 	console.log("Console: GameBoy");
 	console.log("Game: " + gb.title(file));
@@ -45,7 +45,7 @@ if (res == "GBC") {
 	console.log("Version: " + gb.version(file));
 	console.log("Header checksum: " + gb.headerChecksum(file));
 	console.log("Checksum: " + gb.checksum(file));
-} else if (res == "GBA"){
+} else if (res == "GBA") {
 	var gba = require('./bin/gameboyadvance.js');
 	console.log("Console: GameBoy Advance");
 	console.log("Title: " + gba.title(file));
