@@ -66,6 +66,8 @@ if (res == "GBC") {
 	console.log("Has Trainer Data: " + nes.hasTrainerData(file));
 	console.log("Mapper number: " + nes.mapper(file));
 	console.log("TV system: " + nes.tvSystem(file));
+	console.log("Vs. Game: " + nes.vs(file));
+	console.log("PC-10 Game: " + nes.playchoice(file));
 } else {
 	console.log("Console: Unknown");
 }

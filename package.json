@@ -1,6 +1,6 @@
 {
 	"name": "rominfo",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "A command line tool and module for analyzing ROMs.",
 	"main": "index.js",
 	"repository": "https://github.com/moriczgergo/rominfo/",

@@ -130,6 +130,40 @@ function tvSystem(data){
     }
 }
 
+/**
+ * Return PC-10 data
+ * @param {Buffer} data 
+ * @returns {Boolean}
+ */
+function playchoice(data){
+    var convert = toBinary(data[7]);
+    var value = convert[6];
+    if (value == "1"){
+        return true;
+    } else if (value == "0"){
+        return false;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * Return Vs. game data
+ * @param {Buffer} data 
+ * @returns {Boolean}
+ */
+function vs(data){
+    var convert = toBinary(data[7]);
+    var value = convert[7];
+    if (value == "1"){
+        return true;
+    } else if (value == "0"){
+        return false;
+    } else {
+        return false;
+    }
+}
+
 module.exports.recognize = recognize;
 module.exports.prgRom = prgRom;
 module.exports.prgRam = prgRam;
@@ -139,3 +173,5 @@ module.exports.batteryBackedRam = batteryBackedRam;
 module.exports.hasTrainerData = hasTrainerData;
 module.exports.mapper = mapper;
 module.exports.tvSystem = tvSystem;
+module.exports.vs = vs;
+module.exports.playchoice = playchoice;
