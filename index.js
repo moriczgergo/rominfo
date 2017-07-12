@@ -52,6 +52,20 @@ if (res == "GBC") {
 	console.log("Maker code: " + gba.maker(file));
 	console.log("Game info: " + gba.info(file));
 	console.log("Region: " + gba.region(file));
+} else if (res == "NES"){
+	var nes = require('./bin/nes.js');
+	console.log("Console: NES");
+	console.log("PRG ROM size: " + nes.prgRom(file) + "KB");
+	console.log("PRG RAM size: " + nes.prgRam(file) + "KB");
+	var chrRom = nes.chrRom(file)
+	if (chrRom != 0){
+		console.log("CHR ROM size: " + chrRom + "KB");
+	}
+	console.log("Orientation: " + nes.orientation(file));
+	console.log("Battery-Backed RAM: " + nes.batteryBackedRam(file));
+	console.log("Has Trainer Data: " + nes.hasTrainerData(file));
+	console.log("Mapper number: " + nes.mapper(file));
+	console.log("TV system: " + nes.tvSystem(file));
 } else {
 	console.log("Console: Unknown");
 }

@@ -12,6 +12,9 @@ function recognize(data){
 	if (require('./gameboyadvance.js').recognize(data) == true){
 		return "GBA";
 	}
+	if (require('./nes.js').recognize(data) == true){
+		return "NES";
+	}
 	return null;
 }
 
