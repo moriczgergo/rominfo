@@ -13,4 +13,5 @@ npm install -g rominfo
 rominfo -f file.gb
 rominfo -f file.gba
 rominfo -f file.gbc
+rominfo -f file.nes
 ```
